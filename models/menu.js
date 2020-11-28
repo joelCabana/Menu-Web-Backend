@@ -1,12 +1,12 @@
 const {Schema, model} = require('mongoose');
 const category = require('./category');
 
-const menuSchema =  new Schema({
-     name:{type: String, require: false},
-     description:{type:String, require:false},
-     category:[{type: category.Schema, require: false}]
+const menuSchema = new Schema({
+     name:{type: String, required: false},
+     description:{type:String, required:false},
+     category:[{type: category.schema, required: false }]
 })
 
-module.exports = model('MenuSchema', menuSchema);
+module.exports = model('Menu', menuSchema);
 
 

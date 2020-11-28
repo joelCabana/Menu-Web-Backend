@@ -2,9 +2,9 @@ const {Schema, model} = require('mongoose');
 const product = require('./product');
 
 const categorySchema = new Schema({
-    name:{type:String, require: true},
-    available: {type: Boolean, require: false},
-    product: [{type: product.Schema, require: false}]
+    name:{type:String, required: true},
+    available: {type: Boolean, required: false},
+    product: [{type: product.schema, required: false}]
 })
 
 module.exports = model('Category',categorySchema);

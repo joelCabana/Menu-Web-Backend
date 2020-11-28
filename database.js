@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const URI = 'mongodb://localhost/menuWeb';
-mongoose.connect(URI,{
+
+mongoose.connect('mongodb://localhost/menuWeb',{
     useUnifiedTopology: true,
     useNewUrlParser: true
 })
-.then(db=>console.log('DB is connected'))
-.catch(db=>console.error(err));
+.then(db =>console.log('DB is connected'))
+.catch(err =>console.error(err));
