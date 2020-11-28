@@ -24,7 +24,7 @@ res.send({message:'User Deleted'});
 }
 
 userCtrl.updateUser = async(req,res)=>{
-  await User.findByIdAndUpdate(res.params.id, req.body);
+  await User.findByIdAndUpdate(req.params.id, req.body);
   res.send({message : 'User Update'});
 }
 
